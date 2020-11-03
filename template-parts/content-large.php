@@ -1,8 +1,4 @@
-<?php get_header(); ?>
-
-  <div class="main-aside">
-    <main class="main">
-    <?php if ( have_posts()) : while(have_posts()) : the_post();?>
+<?php if ( have_posts()) : while(have_posts()) : the_post();?>
 
       <div id="post-<?php the_ID();?>" <?php post_class('main-content');?>>
           <h1 class="main-content__title">
@@ -14,9 +10,4 @@
           </div>
           <figure  class="main-content__img"><a href="<?php the_permalink()?>"><?php the_post_thumbnail(); ?></a></figure>
       </div>
-    <?php endwhile; endif; ?>
-    </main>
-    <?php get_sidebar(); ?>
-  </div>
-
-<?php get_footer(); ?>
+<?php endwhile; endif; ?>

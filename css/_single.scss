@@ -1,47 +1,66 @@
-.article-aside{
+.article-aside {
   display: flex;
+  width: 100%;
   max-width: 1100px;
   margin-top: 50px;
-  flex-direction :column;
-  @include tab{
-    flex-direction :row;
+  flex-direction: column;
+  @include tab {
+    flex-direction: row;
     margin: 50px auto;
     justify-content: space-between;
-    }
+  }
 }
-.article{
-  width: 100%;
+.article {
+  font-size: 13px;
+  @include tab {
+    font-size: 16px;
+  }
 }
-.article-background{
+.article-background {
   background: #fff;
 }
 
-.post-nav{
+.post-nav {
   display: flex;
   justify-content: space-between;
 }
 
-.article-content{
-  margin-bottom:50px;
+.article-content {
+  margin-bottom: 50px;
 }
-.article-content h1{
-    margin:20px 0;
-    padding:20px;
-    font-size:24px;
-    background: $right-color;
-    color: #fff;
+.article-content h1 {
+  margin: 20px 0;
+  padding: 13px 20px;
+  font-size: 22px;
+  background: $main-color;
+  font-weight: 700;
+  color: $dark-color;
 }
-.article-content h2{
-  margin:20px 0;
-    padding:15px;
-    font-size:20px;
-    font-weight: 700;
-    border-left: solid 5px $dark-color;
+.article-content h2 {
+  margin: 20px 0;
+  padding: 15px;
+  font-size: 20px;
+  font-weight: 700;
+  border-left: solid 5px $main-color;
 }
-.article-content h3{
-    margin:20px 0;
-    font-size:18px;
-    font-weight: 700;
+.article-content h3 {
+  margin: 20px 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+.article-content p,
+h1,
+h2,
+h3 {
+  line-height: 1.8;
+  letter-spacing: 1px;
+}
+.article-content table {
+  border: dashed 2px #9c9a9a;
+  width: 100%;
+}
+.article-content td {
+  padding: 7px 15px;
 }
 
 /* 目次*/
@@ -49,9 +68,9 @@
   margin: 20px auto;
   padding: 15px 20px;
   background: #fff;
-  border-radius: 6px;
+  border-radius: 20px;
   color: #ef6e65c4;
-  }
+}
 
 #toc_container .toc_title {
   font-family: ‘M PLUS Rounded 1c’, sans-serif;
@@ -61,39 +80,51 @@
   padding-top: 0;
   padding-bottom: 0px;
   font-size: 1.7em;
-  border-bottom: 5px solid #dedede; }
+  border-bottom: 5px solid #dedede;
+}
 #toc_container .toc_list {
   list-style-type: none !important;
-  counter-reset: li; }
+  counter-reset: li;
+}
 #toc_container .toc_list > li {
   position: relative;
   margin-bottom: 15px;
   margin-left: 6px;
   line-height: 1.3em;
-  font-size: 0.9em; }
+  font-size: 0.9em;
+}
 #toc_container .toc_list > li a {
-  text-decoration: none !important; }
+  text-decoration: none !important;
+}
 #toc_container .toc_list > li a:hover {
-  text-decoration: underline !important; }
+  text-decoration: underline !important;
+}
 #toc_container .toc_list > li ul {
   list-style-type: disc;
   margin-top: 15px;
   padding-left: 20px;
-  color: #f08080; }
+  color: #f08080;
+}
 #toc_container .toc_list > li > ul li {
   font-size: 0.9em;
-  margin-bottom: 8px; }
+  margin-bottom: 8px;
+}
 @media only screen and (min-width: 641px) {
   #toc_container {
-    padding: 25px 40px; }
+    padding: 25px 40px;
+  }
   #toc_container .toc_title {
-    font-size: 2em; }
+    font-size: 2em;
+  }
   #toc_container .toc_list > li {
     margin-bottom: 18px;
     margin-left: 12px;
-    font-size: 1em; }
+    font-size: 1em;
+  }
   #toc_container .toc_list > li:after {
     left: -48px;
     top: 0px;
-    font-size: 26px; } }
+    font-size: 26px;
+  }
+}
 /* 目次 ここまで*/
