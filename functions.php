@@ -6,9 +6,10 @@ add_theme_support('post-thumbnails');
 
 
 /* 仕事投稿ページ start*/
-function create_post_type() {
-
-register_post_type( 'blog', // URLになる部分
+function create_post_type()
+{
+    register_post_type(
+        'blog', // URLになる部分
 array(
 'label' => '日記', // 管理画面の左メニューに表示されるテキスト
 'labels' => array(
@@ -21,10 +22,10 @@ array(
 'taxonomies' => array('blog_cat'),
 'supports' => array('title','editor','thumbnail')
 )
-);
-//カスタムタクソノミー（仕事カテゴリー：カテゴリー形式）の登録
-  register_taxonomy(
-    'blog_cat',   //カスタムタクソノミー名
+    );
+    //カスタムタクソノミー（仕事カテゴリー：カテゴリー形式）の登録
+    register_taxonomy(
+        'blog_cat',   //カスタムタクソノミー名
     'blog',   //このタクソノミーが使われる投稿タイプ
     array(
       'label' => 'ブログカテゴリー',  //カスタムタクソノミーのラベル
@@ -39,6 +40,14 @@ array(
       'hierarchical' => true,  //カテゴリー形式
       'show_in_rest' => true  //Gutenberg で表示
     )
-  );
+    );
 }
-add_action( 'init', 'create_post_type' );
+add_action('init', 'create_post_type');
+
+function search_exclude_custom_post_type($query)
+{
+    if ($query->is_search() && $query->is_main_query() && ! is_admin()) {
+        $query->set('post_type', array( 'post' ));
+    }
+}
+add_filter('pre_get_posts', 'search_exclude_custom_post_type');

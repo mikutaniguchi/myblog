@@ -206,6 +206,7 @@ img {
 
 @media (min-width: 680px) {
   .article {
+    width: 70%;
     font-size: 16px;
   }
 }
@@ -451,6 +452,12 @@ body {
   height: 100%;
 }
 
+@media (min-width: 680px) {
+  .main {
+    width: 70%;
+  }
+}
+
 .main-content {
   text-align: left;
   margin: 0 2px;
@@ -548,10 +555,6 @@ body {
   .archive-contents::after {
     width: 47%;
   }
-}
-
-* {
-  outline: 1px solid pink;
 }
 
 .archive-content {
@@ -927,13 +930,14 @@ aside {
 
 @media (min-width: 680px) {
   .contact-form {
-    width: 55%;
+    width: 70%;
+    padding: 0 3rem;
   }
 }
 
 /* フォーム入力項目 */
 .must {
-  background: #e94046;
+  background: #d48a8a;
 }
 
 /* 任意マーク */
@@ -955,12 +959,21 @@ aside {
 .wpcf7 input[type="email"],
 .wpcf7 textarea {
   width: 100%;
+  line-height: 1.5;
   padding: 8px 15px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 10px auto 20px auto;
   border: 1px solid #ddd;
   border-radius: 3px;
+}
+
+@media (min-width: 680px) {
+  .wpcf7 input[type="text"],
+  .wpcf7 input[type="email"],
+  .wpcf7 textarea {
+    font-size: 18px;
+  }
 }
 
 input.sub-btn {
@@ -971,7 +984,7 @@ input.sub-btn {
   font-size: 1.1em;
   font-weight: bold;
   letter-spacing: 0.2em;
-  border: 1px solid #d48a8a;
+  border: 2px solid #d48a8a;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   margin: auto;
