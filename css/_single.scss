@@ -19,6 +19,7 @@
 }
 .article-background {
   background: #fff;
+  padding-bottom: 2rem;
 }
 
 .post-nav {
@@ -62,6 +63,11 @@ h3 {
 }
 .article-content td {
   padding: 7px 15px;
+}
+.article-content th {
+  display: table;
+  width: 6em;
+  text-align: right;
 }
 
 /* 目次*/

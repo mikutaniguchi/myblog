@@ -100,13 +100,11 @@ body {
 
 .main-content {
   text-align: left;
-  margin: 0 2px;
+  margin: 0 auto 50px auto;
   margin-bottom: 50px;
-  padding: 5px;
+  max-width: 85%;
   @include tab {
     max-width: 90%;
-    margin: 0 auto 50px auto;
-    padding: 20px;
   }
   &__title {
     font-size: 22px;

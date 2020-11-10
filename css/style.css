@@ -213,6 +213,7 @@ img {
 
 .article-background {
   background: #fff;
+  padding-bottom: 2rem;
 }
 
 .post-nav {
@@ -266,6 +267,12 @@ h3 {
 
 .article-content td {
   padding: 7px 15px;
+}
+
+.article-content th {
+  display: table;
+  width: 6em;
+  text-align: right;
 }
 
 /* 目次*/
@@ -460,16 +467,14 @@ body {
 
 .main-content {
   text-align: left;
-  margin: 0 2px;
+  margin: 0 auto 50px auto;
   margin-bottom: 50px;
-  padding: 5px;
+  max-width: 85%;
 }
 
 @media (min-width: 680px) {
   .main-content {
     max-width: 90%;
-    margin: 0 auto 50px auto;
-    padding: 20px;
   }
 }
 
